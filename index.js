@@ -39,11 +39,7 @@ import { UserController, PostController } from './controllers/index.js'
 import { checkAuth, handleValidationErrors } from './utils/index.js'
 
 mongoose
-  .connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 30000,
-  }) //process.env pozvolaet vidernutj privatnije ssilki, kotorije mi ukazali na heroku k primeru
+  .connect(process.env.MONGODB_URI) //process.env pozvolaet vidernutj privatnije ssilki, kotorije mi ukazali na heroku k primeru
   .then(() => {
     console.log('DB OK')
   })
