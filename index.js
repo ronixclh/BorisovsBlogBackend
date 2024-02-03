@@ -38,8 +38,10 @@ import {
 import { UserController, PostController } from './controllers/index.js'
 import { checkAuth, handleValidationErrors } from './utils/index.js'
 
+const uri = process.env.MONGODB_URI
+
 mongoose
-  .connect(process.env.MONGODB_URI) //process.env pozvolaet vidernutj privatnije ssilki, kotorije mi ukazali na heroku k primeru
+  .connect(uri) //process.env pozvolaet vidernutj privatnije ssilki, kotorije mi ukazali na heroku k primeru
   .then(() => {
     console.log('DB OK')
   })
