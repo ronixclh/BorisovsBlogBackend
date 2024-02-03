@@ -40,7 +40,7 @@ import { checkAuth, handleValidationErrors } from './utils/index.js'
 
 mongoose
   .connect(
-    'mongodb+srv://ronaldsborisovs:saske09099812@cluster0.gsjd2ge.mongodb.net/blog?retryWrites=true&w=majority'
+    'mongodb+srv://ronaldborisov:wwwwww@cluster0.gsjd2ge.mongodb.net/blog?retryWrites=true&w=majority'
   ) //process.env pozvolaet vidernutj privatnije ssilki, kotorije mi ukazali na heroku k primeru
   .then(() => {
     console.log('DB OK')
