@@ -39,9 +39,7 @@ import { UserController, PostController } from './controllers/index.js'
 import { checkAuth, handleValidationErrors } from './utils/index.js'
 
 mongoose
-  .connect(
-    'mongodb+srv://ronaldborisov:wwwwww@cluster0.gsjd2ge.mongodb.net/blog?retryWrites=true&w=majority'
-  ) //process.env pozvolaet vidernutj privatnije ssilki, kotorije mi ukazali na heroku k primeru
+  .connect(process.env.MONGODB_URI) //process.env pozvolaet vidernutj privatnije ssilki, kotorije mi ukazali na heroku k primeru
   .then(() => {
     console.log('DB OK')
   })
