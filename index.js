@@ -38,7 +38,7 @@ import {
 import { UserController, PostController } from './controllers/index.js'
 import { checkAuth, handleValidationErrors } from './utils/index.js'
 
-const uri = process.env.MONGODB_URI
+const uri = process.env.MONGOLAB_URI
 
 mongoose
   .connect(uri) //process.env pozvolaet vidernutj privatnije ssilki, kotorije mi ukazali na heroku k primeru
