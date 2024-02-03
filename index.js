@@ -131,3 +131,5 @@ app.listen(process.env.PORT || 4444, (err) => {
 
   console.log('Server OK')
 }) //process.env.PORT heroku zadajet svoj port
+
+//comment
