@@ -26,6 +26,7 @@ DELETE /posts/:id - Delete(удалить статьи)
 */
 
 import express from 'express'
+import fs from 'fs'
 import multer from 'multer'
 import mongoose from 'mongoose'
 import cors from 'cors'
@@ -59,6 +60,9 @@ const storage = multer.diskStorage({
     cb(null, 'uploads')
   },
   filename: (_, file, cb) => {
+    if (!fs.existsSync('uploads')) {
+      fs.mkdirSync('uploads')
+    }
     cb(null, file.originalname)
   },
 })
